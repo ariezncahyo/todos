@@ -1,0 +1,121 @@
+@use "./variables" as v;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+// Bootstrap Start
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/modal";
+// Bootstrap End
+
+// My Styling Components and Views
+@import "../components/Buttons/buttons.components.scss";
+@import "../components/Cards/cards.components.scss";
+@import "../components/Inputs/inputs.components.scss";
+@import "../components/Modals/modals.components.scss";
+
+@import "./modules/dashboard.modules.scss";
+@import "./modules/detail_activity.modules.scss";
+// End My Styling
+
+// Global Selector
+* {
+  font-family: v.$font;
+}
+
+body {
+  color: v.$text-dark !important;
+}
+
+// // Fonts
+h1 {
+  font-size: 36px !important;
+}
+h2 {
+  font-size: 24px !important;
+}
+h3 {
+  font-size: 18px !important;
+}
+h4 {
+  font-size: 16px !important;
+}
+h5 {
+  font-size: 14px !important;
+}
+h6 {
+  font-size: 12px !important;
+}
+
+// // Buttons
+button {
+  outline: 0 !important;
+  border: 0 !important;
+  background: transparent;
+}
+
+// Custom BS
+.container {
+  max-width: 1000px !important;
+}
+.fade {
+  transition-duration: 0.075s !important;
+}
+// .modal.fade .modal-dialog {
+//   transition-duration: 0.15s !important;
+// }
+
+// Indicator
+
+.todo-indicator {
+  width: 14px;
+  height: 14px;
+
+  &.red {
+    background-color: v.$danger;
+    border-radius: 7px;
+  }
+
+  &.yellow {
+    background-color: v.$warn;
+    border-radius: 7px;
+  }
+
+  &.green {
+    background-color: v.$success;
+    border-radius: 7px;
+  }
+
+  &.blue {
+    background-color: v.$info;
+    border-radius: 7px;
+  }
+  &.purple {
+    background-color: v.$low;
+    border-radius: 7px;
+  }
+}
+
+// My Global Layout
+.todo-header {
+  background-color: v.$primary;
+  color: white;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .todo-header__title {
+    font-weight: 700;
+    line-height: 36px;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.todo-main {
+  min-height: calc(100vh - 105px);
+  padding-bottom: 20px;
+  background-color: v.$background;
+}
