@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build GENERATE_SOURCEMAP=false && mv build webtodo",
+    "build": "react-scripts build GENERATE_SOURCEMAP=false",
     "postbuild": "rimraf build/**/*.map",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
